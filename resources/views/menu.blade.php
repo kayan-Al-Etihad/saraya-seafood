@@ -1,645 +1,862 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description" content="Babette">
-  <link href="/images/favicon/favicon.png" rel="icon">
-  <title>Sarayi</title>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Rubik:400,500,700%7cShadows+Into+Light&display=swap">
-    <link rel="stylesheet" href="{{ asset('css/libraries.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
-</head>
-
-<body>
-  <div class="wrapper">
-    <!-- =========================
-        Header
-    =========================== -->
-    <header id="header" class="header header-transparent header-layout1">
-      <nav class="navbar navbar-expand-lg sticky-navbar">
-          <div class="container">
-              <a class="navbar-brand" href="index.html" style="width: 285px;">
-                  <img src="/images/logo/logo-light.png" class="logo-light" alt="logo">
-                  <img src="/images/logo/logo-light.png" class="logo-dark" alt="logo">
-              </a>
-              <button class="navbar-toggler" type="button">
-                  <span class="menu-lines"><span></span></span>
-              </button>
-              <div class="collapse navbar-collapse" id="mainNavigation">
-                  <ul class="navbar-nav ml-auto">
-                    
-                      <li class="nav__item with-dropdown">
-                          <a href="{{route('index')}}" class="dropdown-toggle nav__item-link ">{{ __('index.home') }}</a>
-                      </li><!-- /.nav-item -->
-                      <li class="nav__item with-dropdown">
-                          <a href="{{route('menu')}}" class="dropdown-toggle nav__item-link active">{{ __('index.menu') }}</a>
-                      </li><!-- /.nav-item -->
-                      <li class="nav__item with-dropdown">
-                          <a href="{{route('team')}}" class="dropdown-toggle nav__item-link">{{ __('index.team') }}</a>
-                      </li><!-- /.nav-item -->
-                      <li class="nav__item with-dropdown">
-                        <a href="{{route('offers')}}" class="dropdown-toggle nav__item-link">{{ __('index.offer') }}</a>
-                    </li>
-                      <li class="nav__item with-dropdown">
-                          <a href="{{route('about')}}" class="dropdown-toggle nav__item-link">{{ __('index.about') }}</a>
-                      </li><!-- /.nav-item -->
-                      <li class="nav__item with-dropdown">
-                          <a href="{{route('contact')}}" class="dropdown-toggle nav__item-link">{{ __('index.contact') }}</a>
-                      </li><!-- /.nav-item -->
-                  </ul>
-              </div>
-              <div class="navbar-actions-wrap">
-                  <div class="navbar-actions d-flex align-items-center">
-                      <ul class="social__icons">
-                        <li class="nav__item with-dropdown">
-                          @if(app()->getLocale() == 'ar')
-                          <a class="dropdown-toggle nav__item-link" href="lang/en">
-                              EN
-                          </a>
-                          @else
-                          <a class="dropdown-toggle nav__item-link" href="lang/ar">
-                              AR
-                          </a>
-                          @endif
-                      </li>
-                      </ul>
-                  </div><!-- /.navbar-actions -->
-              </div><!-- /.navbar-actions-wrap -->
-          </div><!-- /.container -->
-      </nav><!-- /.navabr -->
-  </header><!-- /.Header -->
+<x-layout>
 
 
-    <!-- ========================
-       page title 
-    =========================== -->
     <section id="page-title" class="page-title page-title-layout3 text-center bg-overlay bg-overlay-2 bg-parallax">
-      <div class="bg-img"><img src="/images/backgrounds/10.jpg" alt="background"></div>
-      <svg class="pagetitle__divider-shape" xmlns="http://www.w3.org/2000/svg" width="22" height="61"
-        viewBox="0 0 22 61">
-        <path
-          d="M799,769h2v61h-2V769Zm8,24.8a0.969,0.969,0,0,0-1.911,0,3.012,3.012,0,0,1-.883,2.16,4.486,4.486,0,0,0,0,6.136,3.083,3.083,0,0,1,0,4.32,4.486,4.486,0,0,0,0,6.136,3.088,3.088,0,0,1,0,4.325,4.5,4.5,0,0,0,0,6.142,3.014,3.014,0,0,1,.884,2.163,0.969,0.969,0,0,0,1.911,0,4.414,4.414,0,0,0-1.213-3.07,3.091,3.091,0,0,1,0-4.328,4.491,4.491,0,0,0,0-6.14,3.08,3.08,0,0,1,0-4.319,4.488,4.488,0,0,0,0-6.137,3.081,3.081,0,0,1,0-4.32A4.407,4.407,0,0,0,807,793.8Zm0-20a0.969,0.969,0,0,0-1.911,0,3.014,3.014,0,0,1-.883,2.16,4.486,4.486,0,0,0,0,6.136,3.083,3.083,0,0,1,0,4.32,4.488,4.488,0,0,0,0,6.137,3.087,3.087,0,0,1,0,4.324,4.5,4.5,0,0,0,0,6.142,3.014,3.014,0,0,1,.884,2.163,0.969,0.969,0,0,0,1.911,0,4.414,4.414,0,0,0-1.213-3.07,3.089,3.089,0,0,1,0-4.327,4.491,4.491,0,0,0,0-6.14,3.081,3.081,0,0,1,0-4.32,4.488,4.488,0,0,0,0-6.137,3.081,3.081,0,0,1,0-4.32A4.409,4.409,0,0,0,807,773.8ZM793,793.8a0.969,0.969,0,0,1,1.911,0,3.012,3.012,0,0,0,.883,2.16,4.486,4.486,0,0,1,0,6.136,3.083,3.083,0,0,0,0,4.32,4.486,4.486,0,0,1,0,6.136,3.088,3.088,0,0,0,0,4.325,4.5,4.5,0,0,1,0,6.142,3.014,3.014,0,0,0-.884,2.163,0.969,0.969,0,0,1-1.911,0,4.414,4.414,0,0,1,1.213-3.07,3.091,3.091,0,0,0,0-4.328,4.491,4.491,0,0,1,0-6.14,3.08,3.08,0,0,0,0-4.319,4.488,4.488,0,0,1,0-6.137,3.081,3.081,0,0,0,0-4.32A4.407,4.407,0,0,1,793,793.8Zm0-20a0.969,0.969,0,0,1,1.911,0,3.014,3.014,0,0,0,.883,2.16,4.486,4.486,0,0,1,0,6.136,3.083,3.083,0,0,0,0,4.32,4.488,4.488,0,0,1,0,6.137,3.087,3.087,0,0,0,0,4.324,4.5,4.5,0,0,1,0,6.142,3.014,3.014,0,0,0-.884,2.163,0.969,0.969,0,0,1-1.911,0,4.414,4.414,0,0,1,1.213-3.07,3.089,3.089,0,0,0,0-4.327,4.491,4.491,0,0,1,0-6.14,3.081,3.081,0,0,0,0-4.32,4.488,4.488,0,0,1,0-6.137,3.081,3.081,0,0,0,0-4.32A4.409,4.409,0,0,1,793,773.8Zm-4,5.2h2v41h-2V779Zm20,0h2v41h-2V779Z"
-          transform="translate(-789 -769)"></path>
-      </svg>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1">
-            <span class="pagetitle__subheading">Discover</span>
-            <h1 class="pagetitle__heading">Our Menu</h1>
-          </div><!-- /.col-lg-8 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.page-title -->
-
-    <!-- ==========================
-        Text Block 
-    =========================== -->
-    <section id="textBlock" class="text-block">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-            <div class="heading text-center">
-              <span class="heading__subtitle">Taste The Best</span>
-              <h2 class="heading__title">Discover Our Menu</h2>
-              <div class="heading__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                  <path
-                    d="M515,925a10,10,0,1,0,10,10A10.011,10.011,0,0,0,515,925Zm7,13.865a2.568,2.568,0,0,1-.651-0.549,3.235,3.235,0,0,0-5.209,0,1.449,1.449,0,0,1-1.146.683,1.419,1.419,0,0,1-1.2-.695,3.2,3.2,0,0,0-2.548-1.3,3.345,3.345,0,0,0-2.605,1.316,2.625,2.625,0,0,1-.64.544,7.953,7.953,0,0,1-.928-2.86h15.862A7.926,7.926,0,0,1,522,938.863ZM507.069,934a7.948,7.948,0,0,1,.928-2.859,2.617,2.617,0,0,1,.64.543A3.345,3.345,0,0,0,511.242,933a3.2,3.2,0,0,0,2.548-1.3,1.423,1.423,0,0,1,1.2-.7,1.452,1.452,0,0,1,1.146.685,3.237,3.237,0,0,0,5.209,0,2.575,2.575,0,0,1,.651-0.55,7.939,7.939,0,0,1,.932,2.865H507.069ZM515,927a7.975,7.975,0,0,1,5.8,2.509,5.325,5.325,0,0,0-.914.806,1.3,1.3,0,0,1-2.292,0,3.287,3.287,0,0,0-5.289.035,1.286,1.286,0,0,1-1.066.648,1.452,1.452,0,0,1-1.145-.683,5.348,5.348,0,0,0-.9-0.8A7.972,7.972,0,0,1,515,927Zm0,16a7.97,7.97,0,0,1-5.808-2.516,5.3,5.3,0,0,0,.9-0.8,1.452,1.452,0,0,1,1.145-.685,1.288,1.288,0,0,1,1.066.649,3.288,3.288,0,0,0,5.289.036,1.3,1.3,0,0,1,2.292,0,5.241,5.241,0,0,0,.914.806A7.972,7.972,0,0,1,515,943Z"
-                    transform="translate(-505 -925)"></path>
-                </svg>
-              </div>
-              <p class="heading__desc">Even if you're not a great chef, there's nothing to stop you understanding
-                the difference between what tastes good and what doesn't.</p>
-              <img src="/images/about/signature.png" alt="signature">
-            </div><!-- /.heading -->
-          </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.Text Block -->
-
-    <!-- ========================
-       Text Banner layout 1
-    =========================== -->
-    <section id="textBanner"
-      class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradient bg-parallax">
-      <div class="bg-img"><img src="/images/backgrounds/1.jpg" alt="background"></div>
-      <svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17" viewBox="0 0 142 17">
-        <path
-          d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
-          transform="translate(-729 -583)"></path>
-      </svg>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <span class="banner__subtitle">Starts At 11:00 am</span>
-            <h2 class="banner__title">Breakfast Menu</h2>
-          </div><!-- /.col-lg-12 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.textBanner layout 1 -->
-
-    <!-- ========================
-        Menu layout 
-    =========================== -->
-    <section id="menulayout1" class="menu-layout1 pb-80">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-6">
-            <div class="menu-item">
-              <h4 class="menu__item-title">Smoked Meat Sandwich</h4>
-              <span class="menu__item-price">$12.95</span>
-              <p class="menu__item-desc">Baguette, basil, arugula, olives, cherry-tomatoes.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Salmon Sandwich</h4>
-              <span class="menu__item-price">$15.95</span>
-              <p class="menu__item-desc">Salmon, butter, lemon juice, onion, garlic & salad.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Pan of Fried Eggs</h4>
-              <span class="pricing__tag">Recommended</span>
-              <span class="menu__item-price">$13.95</span>
-              <p class="menu__item-desc">Eggs, bacon and cherry-tomatoes with bread.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Breakfast Set</h4>
-              <span class="menu__item-price">$20.95</span>
-              <p class="menu__item-desc">Croissants with strawberries, mascarpone, honey.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Healthy Breakfast</h4>
-              <span class="menu__item-price">$18.95</span>
-              <p class="menu__item-desc">Oat granola with fresh blueberries, almond, yogurt.</p>
-            </div><!-- /.menu-item -->
-          </div><!-- /.col-lg-6 -->
-          <div class="col-sm-12 col-md-12 col-lg-6">
-            <div class="menu-item">
-              <h4 class="menu__item-title">Chicken Breast</h4>
-              <span class="menu__item-price">$33.95</span>
-              <p class="menu__item-desc">Paupiette of chicken, blue cheese, rosemary beans.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Salmon Steak</h4>
-              <span class="menu__item-price">$41.95</span>
-              <p class="menu__item-desc">Salmon, butter, lemon juice, onion, garlic & salad.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Chicken Crispy</h4>
-              <span class="menu__item-price">$33.95</span>
-              <p class="menu__item-desc">Smoked quail, crispy egg, spelt, girolles, parsley.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Grilled Fillet</h4>
-              <span class="menu__item-price">$26.95</span>
-              <p class="menu__item-desc">Pork fillet, ginger, garlic, honey, pepper & canola oil.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Salmon Steak</h4>
-              <span class="menu__item-price">$27.95</span>
-              <p class="menu__item-desc">Salmon, butter, lemon juice, onion, garlic & salad.</p>
-            </div><!-- /.menu-item -->
-          </div><!-- /.col-lg-6 -->
-        </div><!-- /.row  -->
-      </div><!-- /.container -->
-    </section><!-- /.menu layout 1 -->
-
-    <!-- ========================
-       text Banner layout1
-    =========================== -->
-    <section id="textBanner2"
-      class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradient bg-parallax">
-      <div class="bg-img"><img src="/images/backgrounds/2.jpg" alt="background"></div>
-      <svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17" viewBox="0 0 142 17">
-        <path
-          d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
-          transform="translate(-729 -583)"></path>
-      </svg>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <span class="banner__subtitle">Starts At 2:00 pm</span>
-            <h2 class="banner__title">Lunch Menu</h2>
-          </div><!-- /.col-lg-12 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.textBanner layout1 -->
-
-    <!-- ========================
-        Menu layout 
-    =========================== -->
-    <section id="menu-layout1" class="menu-layout1 pb-80">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-6">
-            <div class="menu-item">
-              <h4 class="menu__item-title">Smoked Meat Sandwich</h4>
-              <span class="pricing__tag">Selection</span>
-              <span class="menu__item-price">$12.95</span>
-              <p class="menu__item-desc">Baguette, basil, arugula, olives, cherry-tomatoes.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Salmon Sandwich</h4>
-              <span class="menu__item-price">$15.95</span>
-              <p class="menu__item-desc">Salmon, butter, lemon juice, onion, garlic & salad.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Pan of Fried Eggs</h4>
-              <span class="menu__item-price">$13.95</span>
-              <p class="menu__item-desc">Eggs, bacon and cherry-tomatoes with bread.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Breakfast Set</h4>
-              <span class="menu__item-price">$20.95</span>
-              <p class="menu__item-desc">Croissants with strawberries, mascarpone, honey.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Healthy Breakfast</h4>
-              <span class="menu__item-price">$18.95</span>
-              <p class="menu__item-desc">Oat granola with fresh blueberries, almond, yogurt.</p>
-            </div><!-- /.menu-item -->
-          </div><!-- /.col-lg-6 -->
-          <div class="col-sm-12 col-md-12 col-lg-6">
-            <div class="menu-item">
-              <h4 class="menu__item-title">Chicken Breast</h4>
-              <span class="menu__item-price">$33.95</span>
-              <p class="menu__item-desc">Paupiette of chicken, blue cheese, rosemary beans.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Salmon Steak</h4>
-              <span class="pricing__tag">New</span>
-              <span class="menu__item-price">$41.95</span>
-              <p class="menu__item-desc">Salmon, butter, lemon juice, onion, garlic & salad.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Chicken Crispy</h4>
-              <span class="menu__item-price">$33.95</span>
-              <p class="menu__item-desc">Smoked quail, crispy egg, spelt, girolles, parsley.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Grilled Fillet</h4>
-              <span class="menu__item-price">$26.95</span>
-              <p class="menu__item-desc">Pork fillet, ginger, garlic, honey, pepper & canola oil.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Salmon Steak</h4>
-              <span class="menu__item-price">$27.95</span>
-              <p class="menu__item-desc">Salmon, butter, lemon juice, onion, garlic & salad.</p>
-            </div><!-- /.menu-item -->
-          </div><!-- /.col-lg-6 -->
-        </div><!-- /.row  -->
-      </div><!-- /.container -->
-    </section><!-- /.menu layout 1 -->
-
-    <!-- ========================
-       text Banner layout1
-    =========================== -->
-    <section id="textBanner3"
-      class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradient bg-parallax">
-      <div class="bg-img"><img src="/images/backgrounds/3.jpg" alt="background"></div>
-      <svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17" viewBox="0 0 142 17">
-        <path
-          d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
-          transform="translate(-729 -583)"></path>
-      </svg>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <span class="banner__subtitle">Starts At 7:00 pm</span>
-            <h2 class="banner__title">Dinner Menu</h2>
-          </div><!-- /.col-lg-12 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.textBanner layout1 -->
-
-    <!-- ========================
-        Menu layout 
-    =========================== -->
-    <section id="menulayout" class="menu-layout1 pb-80">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-6">
-            <div class="menu-item">
-              <h4 class="menu__item-title">Smoked Meat Sandwich</h4>
-              <span class="pricing__tag">Selection</span>
-              <span class="menu__item-price">$12.95</span>
-              <p class="menu__item-desc">Baguette, basil, arugula, olives, cherry-tomatoes.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Salmon Sandwich</h4>
-              <span class="menu__item-price">$15.95</span>
-              <p class="menu__item-desc">Salmon, butter, lemon juice, onion, garlic & salad.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Pan of Fried Eggs</h4>
-              <span class="menu__item-price">$13.95</span>
-              <p class="menu__item-desc">Eggs, bacon and cherry-tomatoes with bread.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Breakfast Set</h4>
-              <span class="pricing__tag">Selection</span>
-              <span class="menu__item-price">$20.95</span>
-              <p class="menu__item-desc">Croissants with strawberries, mascarpone, honey.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Healthy Breakfast</h4>
-              <span class="menu__item-price">$18.95</span>
-              <p class="menu__item-desc">Oat granola with fresh blueberries, almond, yogurt.</p>
-            </div><!-- /.menu-item -->
-          </div><!-- /.col-lg-6 -->
-          <div class="col-sm-12 col-md-12 col-lg-6">
-            <div class="menu-item">
-              <h4 class="menu__item-title">Chicken Breast</h4>
-              <span class="menu__item-price">$33.95</span>
-              <p class="menu__item-desc">Paupiette of chicken, blue cheese, rosemary beans.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Salmon Steak</h4>
-              <span class="menu__item-price">$41.95</span>
-              <p class="menu__item-desc">Salmon, butter, lemon juice, onion, garlic & salad.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Chicken Crispy</h4>
-              <span class="pricing__tag">New</span>
-              <span class="menu__item-price">$33.95</span>
-              <p class="menu__item-desc">Smoked quail, crispy egg, spelt, girolles, parsley.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Grilled Fillet</h4>
-              <span class="menu__item-price">$26.95</span>
-              <p class="menu__item-desc">Pork fillet, ginger, garlic, honey, pepper & canola oil.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Salmon Steak</h4>
-              <span class="menu__item-price">$27.95</span>
-              <p class="menu__item-desc">Salmon, butter, lemon juice, onion, garlic & salad.</p>
-            </div><!-- /.menu-item -->
-          </div><!-- /.col-lg-6 -->
-        </div><!-- /.row  -->
-      </div><!-- /.container -->
-    </section><!-- /.menu layout 1 -->
-
-    <!-- ========================
-       text Banner layout1
-    =========================== -->
-    <section id="textBanner4"
-      class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradient bg-parallax">
-      <div class="bg-img"><img src="/images/backgrounds/4.jpg" alt="background"></div>
-      <svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17" viewBox="0 0 142 17">
-        <path
-          d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
-          transform="translate(-729 -583)"></path>
-      </svg>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <span class="banner__subtitle">Don’t Miss</span>
-            <h2 class="banner__title">Dessert Menu</h2>
-          </div><!-- /.col-lg-12 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.textBanner layout1 -->
-
-    <!-- ========================
-        Menu layout 
-    =========================== -->
-    <section id="menuLayout1" class="menu-layout1 pb-80">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-6">
-            <div class="menu-item">
-              <h4 class="menu__item-title">Smoked Meat Sandwich</h4>
-              <span class="pricing__tag">Selection</span>
-              <span class="menu__item-price">$12.95</span>
-              <p class="menu__item-desc">Baguette, basil, arugula, olives, cherry-tomatoes.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Breakfast Set</h4>
-              <span class="menu__item-price">$20.95</span>
-              <p class="menu__item-desc">Croissants with strawberries, mascarpone, honey.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Healthy Breakfast</h4>
-              <span class="menu__item-price">$18.95</span>
-              <p class="menu__item-desc">Oat granola with fresh blueberries, almond, yogurt.</p>
-            </div><!-- /.menu-item -->
-          </div><!-- /.col-lg-6 -->
-          <div class="col-sm-12 col-md-12 col-lg-6">
-            <div class="menu-item">
-              <h4 class="menu__item-title">Chicken Crispy</h4>
-              <span class="menu__item-price">$33.95</span>
-              <p class="menu__item-desc">Smoked quail, crispy egg, spelt, girolles, parsley.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Grilled Fillet</h4>
-              <span class="menu__item-price">$26.95</span>
-              <p class="menu__item-desc">Pork fillet, ginger, garlic, honey, pepper & canola oil.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Salmon Steak</h4>
-              <span class="menu__item-price">$27.95</span>
-              <p class="menu__item-desc">Salmon, butter, lemon juice, onion, garlic & salad.</p>
-            </div><!-- /.menu-item -->
-          </div><!-- /.col-lg-6 -->
-        </div><!-- /.row  -->
-      </div><!-- /.container -->
-    </section><!-- /.menu layout 1 -->
-
-    <!-- ========================
-       text Banner layout1
-    =========================== -->
-    <section id="textBanner5"
-      class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradient bg-parallax">
-      <div class="bg-img"><img src="/images/backgrounds/5.jpg" alt="background"></div>
-      <svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17" viewBox="0 0 142 17">
-        <path
-          d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
-          transform="translate(-729 -583)"></path>
-      </svg>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <span class="banner__subtitle">Don’t Miss</span>
-            <h2 class="banner__title">Dessert Menu</h2>
-          </div><!-- /.col-lg-12 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.textBanner layout1 -->
-
-    <!-- ========================
-        Menu layout 
-    =========================== -->
-    <section id="menuLayout" class="menu-layout1 pb-80">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-6">
-            <div class="menu-item">
-              <h4 class="menu__item-title">Drinks Set</h4>
-              <span class="menu__item-price">$20.95</span>
-              <p class="menu__item-desc">Croissants with strawberries, mascarpone, honey.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Healthy Breakfast</h4>
-              <span class="menu__item-price">$18.95</span>
-              <p class="menu__item-desc">Oat granola with fresh blueberries, almond, yogurt.</p>
-            </div><!-- /.menu-item -->
-          </div><!-- /.col-lg-6 -->
-          <div class="col-sm-12 col-md-12 col-lg-6">
-            <div class="menu-item">
-              <h4 class="menu__item-title">Chicken Crispy</h4>
-              <span class="menu__item-price">$33.95</span>
-              <p class="menu__item-desc">Smoked quail, crispy egg, spelt, girolles, parsley.</p>
-            </div><!-- /.menu-item -->
-            <div class="menu-item">
-              <h4 class="menu__item-title">Grilled Fillet</h4>
-              <span class="menu__item-price">$26.95</span>
-              <p class="menu__item-desc">Pork fillet, ginger, garlic, honey, pepper & canola oil.</p>
-            </div><!-- /.menu-item -->
-          </div><!-- /.col-lg-6 -->
-        </div><!-- /.row  -->
-      </div><!-- /.container -->
-    </section><!-- /.menu layout 1 -->
-
-    <!-- =====================
-       Clients
-    ======================== -->
-    <section id="clients" class="clients text-center pt-0 pb-80">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
-            <h2 class="heading__title mb-30">A recognized track-record of excellence</h2>
-            <div class="carousel owl-carousel" data-slide="6" data-slide-md="4" data-slide-sm="3" data-autoplay="true"
-              data-nav="false" data-dots="false" data-space="0" data-loop="true" data-speed="700">
-              <div class="client">
-                <a href="#"><img src="/images/clients/1.png" alt="client"></a>
-              </div><!-- /.client -->
-              <div class="client">
-                <a href="#"><img src="/images/clients/2.png" alt="client"></a>
-              </div><!-- /.client -->
-              <div class="client">
-                <a href="#"><img src="/images/clients/3.png" alt="client"></a>
-              </div><!-- /.client -->
-              <div class="client">
-                <a href="#"><img src="/images/clients/4.png" alt="client"></a>
-              </div><!-- /.client -->
-              <div class="client">
-                <a href="#"><img src="/images/clients/5.png" alt="client"></a>
-              </div><!-- /.client -->
-              <div class="client">
-                <a href="#"><img src="/images/clients/6.png" alt="client"></a>
-              </div><!-- /.client -->
-            </div><!-- /.carousel -->
-          </div><!-- /.col-lg-12 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.clients -->
-
-    <!-- ========================
-      Footer
-    ========================== -->
-    <footer id="footer" class="footer footer-layout1 text-center bg-dark">
-      <div class="footer-inner">
+        <div class="bg-img"><img src="{{ asset('images/backgrounds/menu1.jpg') }}" alt="background"></div>
         <div class="container">
-          <div class="footer-top">
             <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12 position-static">
-                <svg class="footer__divider-shape" xmlns="http://www.w3.org/2000/svg" width="22" height="61"
-                  viewBox="0 0 22 61">
-                  <path
-                    d="M799,769h2v61h-2V769Zm8,24.8a0.969,0.969,0,0,0-1.911,0,3.012,3.012,0,0,1-.883,2.16,4.486,4.486,0,0,0,0,6.136,3.083,3.083,0,0,1,0,4.32,4.486,4.486,0,0,0,0,6.136,3.088,3.088,0,0,1,0,4.325,4.5,4.5,0,0,0,0,6.142,3.014,3.014,0,0,1,.884,2.163,0.969,0.969,0,0,0,1.911,0,4.414,4.414,0,0,0-1.213-3.07,3.091,3.091,0,0,1,0-4.328,4.491,4.491,0,0,0,0-6.14,3.08,3.08,0,0,1,0-4.319,4.488,4.488,0,0,0,0-6.137,3.081,3.081,0,0,1,0-4.32A4.407,4.407,0,0,0,807,793.8Zm0-20a0.969,0.969,0,0,0-1.911,0,3.014,3.014,0,0,1-.883,2.16,4.486,4.486,0,0,0,0,6.136,3.083,3.083,0,0,1,0,4.32,4.488,4.488,0,0,0,0,6.137,3.087,3.087,0,0,1,0,4.324,4.5,4.5,0,0,0,0,6.142,3.014,3.014,0,0,1,.884,2.163,0.969,0.969,0,0,0,1.911,0,4.414,4.414,0,0,0-1.213-3.07,3.089,3.089,0,0,1,0-4.327,4.491,4.491,0,0,0,0-6.14,3.081,3.081,0,0,1,0-4.32,4.488,4.488,0,0,0,0-6.137,3.081,3.081,0,0,1,0-4.32A4.409,4.409,0,0,0,807,773.8ZM793,793.8a0.969,0.969,0,0,1,1.911,0,3.012,3.012,0,0,0,.883,2.16,4.486,4.486,0,0,1,0,6.136,3.083,3.083,0,0,0,0,4.32,4.486,4.486,0,0,1,0,6.136,3.088,3.088,0,0,0,0,4.325,4.5,4.5,0,0,1,0,6.142,3.014,3.014,0,0,0-.884,2.163,0.969,0.969,0,0,1-1.911,0,4.414,4.414,0,0,1,1.213-3.07,3.091,3.091,0,0,0,0-4.328,4.491,4.491,0,0,1,0-6.14,3.08,3.08,0,0,0,0-4.319,4.488,4.488,0,0,1,0-6.137,3.081,3.081,0,0,0,0-4.32A4.407,4.407,0,0,1,793,793.8Zm0-20a0.969,0.969,0,0,1,1.911,0,3.014,3.014,0,0,0,.883,2.16,4.486,4.486,0,0,1,0,6.136,3.083,3.083,0,0,0,0,4.32,4.488,4.488,0,0,1,0,6.137,3.087,3.087,0,0,0,0,4.324,4.5,4.5,0,0,1,0,6.142,3.014,3.014,0,0,0-.884,2.163,0.969,0.969,0,0,1-1.911,0,4.414,4.414,0,0,1,1.213-3.07,3.089,3.089,0,0,0,0-4.327,4.491,4.491,0,0,1,0-6.14,3.081,3.081,0,0,0,0-4.32,4.488,4.488,0,0,1,0-6.137,3.081,3.081,0,0,0,0-4.32A4.409,4.409,0,0,1,793,773.8Zm-4,5.2h2v41h-2V779Zm20,0h2v41h-2V779Z"
-                    transform="translate(-789 -769)"></path>
-                </svg>
-              </div><!-- /.col-lg-12 -->
-              <div class="col-sm-12 col-md-12 col-lg-4">
-                <div class="contact-box">
-                  <h6 class="contact__box-title">Our Address</h6>
-                  <ul class="contact__box-list list-unstyled">
-                    <li>22 Alnahas Building, 2 AlBahr St, Tanta Al-Gharbia Governorate, Egypt</li>
-                  </ul>
-                </div><!-- /.contact-box -->
-              </div><!-- /.col-lg-4 -->
-              <div class="col-sm-12 col-md-12 col-lg-4">
-                <div class="contact-box">
-                  <h6 class="contact__box-title">Opening Hours</h6>
-                  <ul class="contact__box-list list-unstyled">
-                    <li>Mon - Fri: 10 AM - 11 PM</li>
-                    <li>Sat - Sun: 9 AM - 1 PM</li>
-                  </ul>
-                </div><!-- /.contact-box -->
-              </div><!-- /.col-lg-4 -->
-              <div class="col-sm-12 col-md-12 col-lg-4">
-                <div class="contact-box">
-                  <h6 class="contact__box-title">Private Dinning</h6>
-                  <ul class="contact__box-list list-unstyled">
-                    <li><span>Main Email:</span><a href="mailto:Babette@7oroof.com">Babette@7oroof.com</a></li>
-                    <li><span>Phone:</span><a href="tel:020101236547">02 0101236547</a></li>
-                  </ul>
-                </div><!-- /.contact-box -->
-              </div><!-- /.col-lg-4 -->
-            </div><!-- /.row -->
-          </div><!-- /.footer-top -->
-          <div class="footer-middle">
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12 position-static">
-                <div class="footer__logo-wrap text-center">
-                  <img src="/images/logo/footer-logo.png" alt="logo" class="footer__logo">
+                <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1">
+                    <h1 class="pagetitle__heading">{{ __('menu.menu') }}</h1>
                 </div>
-              </div><!-- /.col-lg-12 -->
-            </div><!-- /.row -->
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team text-center pb-50">
+        <div class="container">
             <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-                <p class="mb-20">Babette was designed with the history in mind we have created a soft industrial dining
-                  room, combined with an open kitchen, coffee take out bar and alovely awesome on site coffee roastery.
-                </p>
-                <a href="reservation.html" class="btn btn__primary btn__bordered btn__lg">Book Your Table Now!</a>
-              </div><!-- /.col-lg-6 -->
-            </div><!-- /.row -->
-          </div><!-- /.footer-middle -->
+                <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                    <div class="heading heading-layout2 text-center mb-40">
+                        <h2 class="heading__desc" style="    font-size: 20px;
+                  width: 701px;
+                  text-align: center;
+                  color:#0094ae;">Our passionate culinary team is made up of innovative and experienced
+
+                        </h2>
+                    </div>
+                </div>
+            </div>
         </div><!-- /.container -->
-        <div class="footer-bottom">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12">
-                <div class="footer__copyright mb-30">
-                  <span>&copy; Babette, With Love by </span>
-                  <a href="http://themeforest.net/user/7oroof" class="color-theme">7oroof.com</a>
-                </div>
-                <ul class="social__icons social__icons-white justify-content-center">
-                  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                  <li><a href="#"><i class="fa fa-tripadvisor"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                </ul><!-- /.social__icons -->
-              </div>
-            </div><!-- /.row -->
-          </div><!-- /.container -->
-          <svg class="footer__divider-shape-bottom" xmlns="http://www.w3.org/2000/svg" width="142" height="17"
-            viewBox="0 0 142 17">
+    </section>
+
+    <section id="textBanner"
+        class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradient bg-parallax">
+        <div class="bg-img"><img src="/images/backgrounds/1.jpg" alt="background"></div>
+        <svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17" viewBox="0 0 142 17">
             <path
-              d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
-              transform="translate(-729 -583)"></path>
-          </svg>
-        </div><!-- /.Footer-bottom -->
-      </div><!-- /.Footer-inner -->
-    </footer><!-- /.Footer -->
-    <button id="scrollTopBtn"><i class="fa fa-angle-up"></i></button>
+                d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
+                transform="translate(-729 -583)"></path>
+        </svg>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="banner__title">{{ __('menu.appetizers') }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="search-popup">
-      <i class="fa fa-times close-search"></i>
-      <form class="module__search-form">
-        <input type="text" class="search__input" placeholder="Type Words Then Enter">
-        <button class="module__search-btn"><i class="fa fa-search"></i></button>
-      </form>
-    </div><!-- /.search-popup -->
+    <section id="menulayout1" class="menu-layout1 pb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('apetizers.butterfly shrmip') }}</h4>
+                        <span class="pricing__tag">Selection</span>
+                        <span class="menu__item-price">$12.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('apetizers.Konafa shrimp') }}</h4>
+                        <span class="menu__item-price">$15.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('apetizers.Saray Mix Fried') }}</h4>
+                        <span class="menu__item-price">$13.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('apetizers.wings1') }}</h4>
+                        <span class="menu__item-price">$20.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('apetizers.wings2') }}</h4>
+                        <span class="menu__item-price">$18.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('apetizers.Pickled tomatoes') }}</h4>
+                        <span class="menu__item-price">$18.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('apetizers.Tahini salad') }}</h4>
+                        <span class="menu__item-price">$18.95</span>
+                    </div><!-- /.menu-item -->
+                </div><!-- /.col-lg-6 -->
 
-  </div>
-  <!-- /.wrapper -->
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('apetizers.Mutabbal eggplant') }}</h4>
+                        <span class="menu__item-price">$33.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('apetizers.Fried eggplant') }}</h4>
+                        <span class="menu__item-price">$33.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('apetizers.Saray Gratan') }}</h4>
+                        <span class="menu__item-price">$26.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('apetizers.Cheese spring roll') }}</h4>
+                        <span class="menu__item-price">$27.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('apetizers.Sausage spring roll') }}</h4>
+                        <span class="menu__item-price">$27.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('apetizers.Chicken strips') }}</h4>
+                        <span class="menu__item-price">$27.95</span>
+                    </div><!-- /.menu-item -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row  -->
+        </div>
+    </section>
 
-  <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
-  <script src="{{ asset('js/plugins.js') }}"></script>
-  <script src="{{ asset('js/main.js') }}"></script>
-</body>
+    <section id="textBanner2"
+        class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradient bg-parallax">
+        <div class="bg-img"><img src="/images/backgrounds/2.jpg" alt="background"></div>
+        <svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17" viewBox="0 0 142 17">
+            <path
+                d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
+                transform="translate(-729 -583)"></path>
+        </svg>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="banner__title">{{ __('breakfast.Breakfast') }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</html>
+    <section id="menu-layout1" class="menu-layout1 pb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('breakfast.Classic breakfast') }}</h4>
+                        <span class="pricing__tag">Selection</span>
+                        <span class="menu__item-price">$12.95</span>
+                        <p class="menu__item-desc">{{ __('breakfast.Omelette - Toast - Mushroom - Fries') }}</p>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('breakfast.Saray Breakfast') }}</h4>
+                        <span class="menu__item-price">$15.95</span>
+                        <p class="menu__item-desc">{{ __('breakfast.Mix omelette salami or sausage - Mushroom - Toast - Fries') }}</p>
+                    </div><!-- /.menu-item -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                  <div class="menu-item">
+                    <h4 class="menu__item-title">{{ __('breakfast.Club sandwich') }}</h4>
+                    <span class="menu__item-price">$13.95</span>
+                    <p class="menu__item-desc">{{ __('breakfast.Omelette toast - Smoke Beef - Smoke turkey tomato - Mayonnaise fries') }}</p>
+                </div><!-- /.menu-item -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row  -->
+        </div><!-- /.container -->
+    </section>
+
+    <section id="textBanner3"
+        class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradient bg-parallax">
+        <div class="bg-img"><img src="/images/backgrounds/3.jpg" alt="background"></div>
+        <svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17" viewBox="0 0 142 17">
+            <path
+                d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
+                transform="translate(-729 -583)"></path>
+        </svg>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="banner__title">{{ __('soup.Soup') }}</h2>
+                </div><!-- /.col-lg-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+
+    <section id="menulayout" class="menu-layout1 pb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('soup.Bisk Soup') }}</h4>
+                        <span class="pricing__tag">Selection</span>
+                        <span class="menu__item-price">$12.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('soup.Creamy Chicken') }}</h4>
+                        <span class="menu__item-price">$15.95</span>
+                    </div><!-- /.menu-item -->>
+                </div><!-- /.col-lg-6 -->
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('soup.Seafood Soup (Creamy)') }}</h4>
+                        <span class="menu__item-price">$33.95</span>
+                    </div><!-- /.menu-item -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row  -->
+        </div><!-- /.container -->
+    </section>
+
+    <section id="textBanner4"
+    class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradient bg-parallax">
+    <div class="bg-img"><img src="/images/backgrounds/3.jpg" alt="background"></div>
+        <svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17" viewBox="0 0 142 17">
+            <path
+                d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
+                transform="translate(-729 -583)"></path>
+        </svg>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="banner__title">{{ __('rise.rise') }}</h2>
+                </div><!-- /.col-lg-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+
+    <section id="menuLayout1" class="menu-layout1 pb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('rise.Sayadiyah Rice (Brown)') }}</h4>
+                        <span class="pricing__tag">Selection</span>
+                        <span class="menu__item-price">$12.95</span>
+                    </div><!-- /.menu-item -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('rise.Basmati rice (yellow)') }}</h4>
+                        <span class="menu__item-price">$33.95</span>
+                    </div><!-- /.menu-item -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row  -->
+        </div><!-- /.container -->
+    </section>
+
+    <section id="textBanner5"
+        class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradient bg-parallax">
+        <div class="bg-img"><img src="/images/backgrounds/3.jpg" alt="background"></div>
+        <svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17" viewBox="0 0 142 17">
+            <path
+                d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
+                transform="translate(-729 -583)"></path>
+        </svg>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="banner__title">{{ __('salad.salad') }}</h2>
+                </div><!-- /.col-lg-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+
+    <section id="menuLayout" class="menu-layout1 pb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('salad.Smoke Salmon Salad') }}</h4>
+                        <span class="menu__item-price">$20.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('salad.saladtahina') }}</h4>
+                        <span class="menu__item-price">$18.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('salad.Tahini salad') }}</h4>
+                        <span class="menu__item-price">$18.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('salad.motabal salad') }}</h4>
+                        <span class="menu__item-price">$18.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('salad.Seasoned tomato salad') }}</h4>
+                        <span class="menu__item-price">$18.95</span>
+                    </div><!-- /.menu-item -->
+                </div><!-- /.col-lg-6 -->
+
+
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('salad.Salad aubergine fried') }}</h4>
+                        <span class="menu__item-price">$33.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('salad.Garlic salad') }}</h4>
+                        <span class="menu__item-price">$26.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('salad.Shrimp salad') }}</h4>
+                        <span class="menu__item-price">$26.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('salad.tuna salad') }}</h4>
+                        <span class="menu__item-price">$26.95</span>
+                    </div><!-- /.menu-item -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row  -->
+        </div><!-- /.container -->
+    </section>
+
+
+    <section id="textBanner6"
+        class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradient bg-parallax">
+        <div class="bg-img"><img src="/images/backgrounds/3.jpg" alt="background"></div>
+        <svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17" viewBox="0 0 142 17">
+            <path
+                d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
+                transform="translate(-729 -583)"></path>
+        </svg>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="banner__title">{{ __('pasta.Pasta') }}</h2>
+                </div><!-- /.col-lg-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+
+    <section id="menuLayout" class="menu-layout1 pb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('pasta.Pasta Sea Food') }}</h4>
+                        <span class="menu__item-price">$20.95</span>
+                        <p class="menu__item-desc">{{ __('pasta.(White sauce - red sauce (shrimp-fillet-squid-calamari)') }}</p>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('pasta.Pasta Jumbri') }}</h4>
+                        <span class="menu__item-price">$18.95</span>
+                        <p class="menu__item-desc">{{ __('pasta.(White Sauce - Red Sauce)') }}</p>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('pasta.Basta Maslaz') }}</h4>
+                        <span class="menu__item-price">$18.95</span>
+                        <p class="menu__item-desc">{{ __('pasta.(White Sauce - Red Sauce)') }}</p>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('pasta.Pasta Kalimari') }}</h4>
+                        <span class="menu__item-price">$18.95</span>
+                        <p class="menu__item-desc">{{ __('pasta.(White Sauce - Red Sauce)') }}</p>
+                    </div><!-- /.menu-item -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('pasta.Pasta Salmon') }}</h4>
+                        <span class="menu__item-price">$18.95</span>
+                        <p class="menu__item-desc">{{ __('pasta.(White Sauce - Red Sauce)') }}</p>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('pasta.Shrimp') }}</h4>
+                        <span class="menu__item-price">$33.95</span>
+                        <p class="menu__item-desc">{{ __('pasta.(shrimp - sherry tomatoes - sauce (white - red)') }}</p>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('pasta.Mix CFD') }}</h4>
+                        <span class="menu__item-price">$26.95</span>
+                        <p class="menu__item-desc">{{ __('pasta.(shrimp - sherry tomatoes - sauce (white - red)') }}</p>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('pasta.Salmon') }}</h4>
+                        <span class="menu__item-price">$26.95</span>
+                        <p class="menu__item-desc">{{ __('pasta.(Salmon - white sauce - Pamizan cheese)') }}</p>
+                    </div><!-- /.menu-item -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row  -->
+        </div><!-- /.container -->
+    </section>
+
+
+    <section id="textBanner7"
+        class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradient bg-parallax">
+        <div class="bg-img"><img src="/images/backgrounds/3.jpg" alt="background"></div>
+        <svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17" viewBox="0 0 142 17">
+            <path
+                d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
+                transform="translate(-729 -583)"></path>
+        </svg>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="banner__title">{{ __('fajita.Fajita') }}</h2>
+                </div><!-- /.col-lg-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+
+    <section id="menuLayout" class="menu-layout1 pb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('fajita.Grilled shrimp fajita') }}</h4>
+                        <span class="menu__item-price">$20.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('fajita.Fajita calamari grill') }}</h4>
+                        <span class="menu__item-price">$18.95</span>
+                    </div><!-- /.menu-item -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('fajita.Fajita calamari grill') }}</h4>
+                        <span class="menu__item-price">$18.95</span>
+                    </div><!-- /.menu-item -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row  -->
+        </div><!-- /.container -->
+    </section>
+
+    <section id="textBanner8"
+        class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradient bg-parallax">
+        <div class="bg-img"><img src="/images/backgrounds/3.jpg" alt="background"></div>
+        <svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17" viewBox="0 0 142 17">
+            <path
+                d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
+                transform="translate(-729 -583)"></path>
+        </svg>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="banner__title">{{ __('casserole.casserole') }}</h2>
+                </div><!-- /.col-lg-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+
+    <section id="menuLayout" class="menu-layout1 pb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('casserole.Molokhia with shrimp') }}</h4>
+                        <span class="pricing__tag">Selection</span>
+                        <span class="menu__item-price">$12.95</span>
+                    </div><!-- /.menu-item -->
+
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('casserole.Fillet Casserole') }}</h4>
+                        <span class="menu__item-price">$12.95</span>
+                        <p class="menu__item-desc">{{ __('casserole.Red bell pepper - green bell pepper - Tomato - Onion - Alexandrian sauce') }}</p>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('casserole.Shrimp') }}</h4>
+                        <span class="menu__item-price">$12.95</span>
+                        <p class="menu__item-desc">{{ __('casserole.Green bell pepper - red bell pepper - tomato - onion - Alexandrian sauce') }}</p>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('casserole.Saray Seafood') }}</h4>
+                        <span class="menu__item-price">$12.95</span>
+                        <p class="menu__item-desc">{{ __('casserole.Shrimp - calamari - fillet - red bell pepper - green bell pepper - tomato - Alexandrian sauce') }}</p>
+                    </div><!-- /.menu-item -->
+
+ 
+                </div><!-- /.col-lg-6 -->
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('casserole.Chicken') }}</h4>
+                        <span class="menu__item-price">$12.95</span>
+                        <p class="menu__item-desc">{{ __('casserole.Delicious chicken pieces with Turkish Alexandrian sauce and vegetables') }}</p>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('casserole.Meat') }}</h4>
+                        <span class="menu__item-price">$12.95</span>
+                        <p class="menu__item-desc">{{ __('casserole.Delicious meat pieces with fresh vegetables and Turkish Alexandrian sauce') }}</p>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('casserole.Shrimp') }}</h4>
+                        <span class="menu__item-price">$12.95</span>
+                        <p class="menu__item-desc">{{ __('casserole.Shrimp with fresh vegetables and Turkish iskender sauce') }}</p>
+                    </div><!-- /.menu-item -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row  -->
+        </div><!-- /.container -->
+    </section>
+
+
+    <section id="textBanner9"
+        class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradient bg-parallax">
+        <div class="bg-img"><img src="/images/backgrounds/3.jpg" alt="background"></div>
+        <svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17" viewBox="0 0 142 17">
+            <path
+                d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
+                transform="translate(-729 -583)"></path>
+        </svg>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="banner__title">{{ __('shish.Al Shish') }}</h2>
+                </div><!-- /.col-lg-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+
+    <section id="menuLayout" class="menu-layout1 pb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('shish.Shish Fillet') }}</h4>
+                        <span class="pricing__tag">Selection</span>
+                        <span class="menu__item-price">$12.95</span>
+                    </div><!-- /.menu-item --> 
+                </div><!-- /.col-lg-6 -->
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('shish.Shish Jumbri') }}</h4>
+                        <span class="menu__item-price">$12.95</span>
+                    </div><!-- /.menu-item -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row  -->
+        </div><!-- /.container -->
+    </section>
+
+
+    <section id="textBanner10"
+        class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradient bg-parallax">
+        <div class="bg-img"><img src="/images/backgrounds/3.jpg" alt="background"></div>
+        <svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17" viewBox="0 0 142 17">
+            <path
+                d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
+                transform="translate(-729 -583)"></path>
+        </svg>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="banner__title">{{ __('family.Family Mix') }}</h2>
+                </div><!-- /.col-lg-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+
+    <section id="menuLayout" class="menu-layout1 pb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('family.Family Mix Fried') }}</h4>
+                        <span class="pricing__tag">Selection</span>
+                        <span class="menu__item-price">$12.95</span>
+                        <p class="menu__item-desc">{{ __('family.Shrimp / calamari / fillet') }}</p>
+
+                    </div><!-- /.menu-item --> 
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('family.Family mix grill') }}</h4>
+                        <span class="menu__item-price">$12.95</span>
+                        <p class="menu__item-desc">{{ __('family.Shrimp / calamari / fillet') }}</p>
+
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('family.Family shrimp butter fry') }}</h4>
+                        <span class="menu__item-price">$12.95</span>
+                    </div><!-- /.menu-item -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('family.Family crab butter fry') }}</h4>
+                        <span class="menu__item-price">$12.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('family.Grilled family puri') }}</h4>
+                        <span class="menu__item-price">$12.95</span>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('family.Family Dennis grilled') }}</h4>
+                        <span class="menu__item-price">$12.95</span>
+                    </div><!-- /.menu-item -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row  -->
+        </div><!-- /.container -->
+    </section>
+
+
+    <section id="textBanner11"
+        class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradient bg-parallax">
+        <div class="bg-img"><img src="/images/backgrounds/2.jpg" alt="background"></div>
+        <svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17" viewBox="0 0 142 17">
+            <path
+                d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
+                transform="translate(-729 -583)"></path>
+        </svg>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="banner__title">{{ __('maindishes.main dishes') }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu-layout1" class="menu-layout1 pb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('maindishes.Shish fillet') }}</h4>
+                        <span class="pricing__tag">Selection</span>
+                        <span class="menu__item-price">$12.95</span>
+                        <p class="menu__item-desc">{{ __('maindishes.Fillet - red pepper - green pepper - onion - buffalo sauce, served with fries') }}</p>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('maindishes.Such a fillet') }}</h4>
+                        <span class="menu__item-price">$15.95</span>
+                        <p class="menu__item-desc">{{ __('maindishes.Fillet - red bell pepper - green bell pepper - tomato - onion') }}</p>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('maindishes.Calamari Satch') }}</h4>
+                        <span class="menu__item-price">$15.95</span>
+                        <p class="menu__item-desc">{{ __('maindishes.Calamari - red bell pepper - green bell pepper - tomato - onion') }}</p>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('maindishes.Chicken satach') }}</h4>
+                        <span class="menu__item-price">$15.95</span>
+                        <p class="menu__item-desc">{{ __('maindishes.Chicken - red pepper - green pepper - tomato') }}</p>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('maindishes.Alexandrian shrimp') }}</h4>
+                        <span class="menu__item-price">$15.95</span>
+                        <p class="menu__item-desc">{{ __('maindishes.Shrimp - red bell pepper - green bell pepper - onion') }}</p>
+                    </div><!-- /.menu-item -->
+                    <div class="menu-item">
+                        <h4 class="menu__item-title">{{ __('maindishes.Shrimp shish') }}</h4>
+                        <span class="menu__item-price">$15.95</span>
+                        <p class="menu__item-desc">{{ __('maindishes.Shrimp - green pepper - red pepper - onion - buffalo sauce, served with fries') }}</p>
+                    </div><!-- /.menu-item -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                  <div class="menu-item">
+                    <h4 class="menu__item-title">{{ __('maindishes.Shrimp satach') }}</h4>
+                    <span class="menu__item-price">$13.95</span>
+                    <p class="menu__item-desc">{{ __('maindishes.Shrimp - red bell pepper - green bell pepper - tomato - onion') }}</p>
+                </div><!-- /.menu-item -->
+                <div class="menu-item">
+                    <h4 class="menu__item-title">{{ __('maindishes.Jumbo shrimp show') }}</h4>
+                    <span class="menu__item-price">$15.95</span>
+                    <p class="menu__item-desc">{{ __('maindishes.Shrimp - toast bread - turkish sauce - cherry tomatoes') }}</p>
+                </div><!-- /.menu-item -->
+                <div class="menu-item">
+                    <h4 class="menu__item-title">{{ __('maindishes.Meat Satch') }}</h4>
+                    <span class="menu__item-price">$15.95</span>
+                    <p class="menu__item-desc">{{ __('maindishes.Meat - red pepper - green pepper - tomato') }}</p>
+                </div><!-- /.menu-item -->
+                <div class="menu-item">
+                    <h4 class="menu__item-title">{{ __('maindishes.Boneless Chicken') }}</h4>
+                    <span class="menu__item-price">$15.95</span>
+                    <p class="menu__item-desc">{{ __('maindishes.Served with rice') }}</p>
+                </div><!-- /.menu-item -->
+                <div class="menu-item">
+                    <h4 class="menu__item-title">{{ __('maindishes.Puri Sinjari') }}</h4>
+                    <span class="menu__item-price">$15.95</span>
+                    <p class="menu__item-desc">{{ __('maindishes.Singari puri - tomato - onion - hot pepper') }}</p>
+                </div><!-- /.menu-item -->
+                <div class="menu-item">
+                    <h4 class="menu__item-title">{{ __('maindishes.Denis roast') }}</h4>
+                    <span class="menu__item-price">$15.95</span>
+                    <p class="menu__item-desc">{{ __('maindishes.1 sea bream fish - butter - lemon') }}</p>
+                </div><!-- /.menu-item -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row  -->
+        </div><!-- /.container -->
+    </section>
+
+
+
+    <section id="textBanner10"
+    class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradient bg-parallax">
+    <div class="bg-img"><img src="/images/backgrounds/3.jpg" alt="background"></div>
+    <svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17" viewBox="0 0 142 17">
+        <path
+            d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
+            transform="translate(-729 -583)"></path>
+    </svg>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <h2 class="banner__title">{{ __('colddrinks.Cold Drinks') }}</h2>
+            </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+
+<section id="menuLayout" class="menu-layout1 pb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="menu-item">
+                    <h4 class="menu__item-title">{{ __('colddrinks.Soft Drink') }}</h4>
+                    <span class="pricing__tag">Selection</span>
+                    <span class="menu__item-price">$12.95</span>
+                    <p class="menu__item-desc">{{ __('colddrinks.(Pepsi, 7Up, Miranda)') }}</p>
+                </div><!-- /.menu-item --> 
+                <div class="menu-item">
+                    <h4 class="menu__item-title">{{ __('colddrinks.Small mineral water') }}</h4>
+                    <span class="menu__item-price">$12.95</span>
+                </div><!-- /.menu-item -->
+                <div class="menu-item">
+                    <h4 class="menu__item-title">{{ __('colddrinks.Large mineral water') }}</h4>
+                    <span class="menu__item-price">$12.95</span>
+                </div><!-- /.menu-item -->
+            </div><!-- /.col-lg-6 -->
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="menu-item">
+                    <h4 class="menu__item-title">{{ __('colddrinks.Sparkling water') }}</h4>
+                    <span class="menu__item-price">$12.95</span>
+                </div><!-- /.menu-item -->
+                <div class="menu-item">
+                    <h4 class="menu__item-title">{{ __('colddrinks.Red Bull') }}</h4>
+                    <span class="menu__item-price">$12.95</span>
+                </div><!-- /.menu-item -->
+                <div class="menu-item">
+                    <h4 class="menu__item-title">{{ __('colddrinks.Ayran milk') }}</h4>
+                    <span class="menu__item-price">$12.95</span>
+                </div><!-- /.menu-item -->
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row  -->
+    </div><!-- /.container -->
+</section>
+
+
+
+<section id="textBanner10"
+class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradient bg-parallax">
+<div class="bg-img"><img src="/images/backgrounds/3.jpg" alt="background"></div>
+<svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17" viewBox="0 0 142 17">
+    <path
+        d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
+        transform="translate(-729 -583)"></path>
+</svg>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <h2 class="banner__title">{{ __('hotdrinks.Hot Drinks') }}</h2>
+        </div><!-- /.col-lg-12 -->
+    </div><!-- /.row -->
+</div><!-- /.container -->
+</section>
+
+<section id="menuLayout" class="menu-layout1 pb-80">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="menu-item">
+                <h4 class="menu__item-title">{{ __('hotdrinks.Single espresso') }}</h4>
+                <span class="pricing__tag">Selection</span>
+                <span class="menu__item-price">$12.95</span>
+            </div><!-- /.menu-item --> 
+            <div class="menu-item">
+                <h4 class="menu__item-title">{{ __('hotdrinks.Double espresso') }}</h4>
+                <span class="menu__item-price">$12.95</span>
+            </div><!-- /.menu-item -->
+            <div class="menu-item">
+                <h4 class="menu__item-title">{{ __('hotdrinks.cappuccino') }}</h4>
+                <span class="menu__item-price">$12.95</span>
+            </div><!-- /.menu-item -->
+            <div class="menu-item">
+                <h4 class="menu__item-title">{{ __('hotdrinks.Latte') }}</h4>
+                <span class="menu__item-price">$12.95</span>
+            </div><!-- /.menu-item -->
+
+
+            <div class="menu-item">
+                <h4 class="menu__item-title">{{ __('hotdrinks.Macchiato') }}</h4>
+                <span class="menu__item-price">$12.95</span>
+            </div><!-- /.menu-item -->
+            <div class="menu-item">
+                <h4 class="menu__item-title">{{ __('hotdrinks.Double macchiato') }}</h4>
+                <span class="menu__item-price">$12.95</span>
+            </div><!-- /.menu-item -->
+            <div class="menu-item">
+                <h4 class="menu__item-title">{{ __('hotdrinks.Americano') }}</h4>
+                <span class="menu__item-price">$12.95</span>
+            </div><!-- /.menu-item -->
+            <div class="menu-item">
+                <h4 class="menu__item-title">{{ __('hotdrinks.Single Turkish coffee') }}</h4>
+                <span class="menu__item-price">$12.95</span>
+            </div><!-- /.menu-item -->
+
+
+        </div><!-- /.col-lg-6 -->
+        <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="menu-item">
+                <h4 class="menu__item-title">{{ __('hotdrinks.hot chocolate') }}</h4>
+                <span class="menu__item-price">$12.95</span>
+            </div><!-- /.menu-item -->
+            <div class="menu-item">
+                <h4 class="menu__item-title">{{ __('hotdrinks.Mocha Cafe') }}</h4>
+                <span class="menu__item-price">$12.95</span>
+            </div><!-- /.menu-item -->
+            <div class="menu-item">
+                <h4 class="menu__item-title">{{ __('hotdrinks.Spanish latte') }}</h4>
+                <span class="menu__item-price">$12.95</span>
+            </div><!-- /.menu-item -->
+            <div class="menu-item">
+                <h4 class="menu__item-title">{{ __('hotdrinks.Flat white') }}</h4>
+                <span class="menu__item-price">$12.95</span>
+            </div><!-- /.menu-item -->
+
+
+            <div class="menu-item">
+                <h4 class="menu__item-title">{{ __('hotdrinks.Double Turkish coffee') }}</h4>
+                <span class="menu__item-price">$12.95</span>
+            </div><!-- /.menu-item -->
+            <div class="menu-item">
+                <h4 class="menu__item-title">{{ __('hotdrinks.apple cider') }}</h4>
+                <span class="menu__item-price">$12.95</span>
+            </div><!-- /.menu-item -->
+            <div class="menu-item">
+                <h4 class="menu__item-title">{{ __('hotdrinks.tea') }}</h4>
+                <span class="menu__item-price">$12.95</span>
+            </div><!-- /.menu-item -->
+            <div class="menu-item">
+                <h4 class="menu__item-title">{{ __('hotdrinks.Flavored tea') }}</h4>
+                <span class="menu__item-price">$12.95</span>
+            </div><!-- /.menu-item -->
+
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row  -->
+</div><!-- /.container -->
+</section>
+
+
+
+<section id="textBanner10"
+class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradient bg-parallax">
+<div class="bg-img"><img src="/images/backgrounds/3.jpg" alt="background"></div>
+<svg class="divider-shape" xmlns="http://www.w3.org/2000/svg" width="142" height="17" viewBox="0 0 142 17">
+    <path
+        d="M800,600V583c8.782,15.985,46.811,11.315,56,12a35.721,35.721,0,0,1,15,5m-71,0V583c-8.782,15.985-46.811,11.315-56,12a35.717,35.717,0,0,0-15,5"
+        transform="translate(-729 -583)"></path>
+</svg>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <h2 class="banner__title">{{ __('Exclusivehotdrinks.Hot Drinks') }}</h2>
+        </div><!-- /.col-lg-12 -->
+    </div><!-- /.row -->
+</div><!-- /.container -->
+</section>
+
+<section id="menuLayout" class="menu-layout1 pb-80">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="menu-item">
+                <h4 class="menu__item-title">{{ __('Exclusivehotdrinks.Spanish Latte') }}</h4>
+                <span class="pricing__tag">Selection</span>
+                <span class="menu__item-price">$12.95</span>
+            </div><!-- /.menu-item --> 
+
+        </div><!-- /.col-lg-6 -->
+        <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="menu-item">
+                <h4 class="menu__item-title">{{ __('Exclusivehotdrinks.Pop Corn Latte') }}</h4>
+                <span class="menu__item-price">$12.95</span>
+            </div><!-- /.menu-item -->
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row  -->
+</div><!-- /.container -->
+</section>
+
+</x-layout>

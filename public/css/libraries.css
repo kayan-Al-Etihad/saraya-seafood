@@ -1699,7 +1699,7 @@
      }
 
      .offset-lg-3 {
-         margin-left: 25%
+         margin-left: 19%
      }
 
      .offset-lg-4 {
@@ -4768,7 +4768,7 @@
  .navbar .container-sm,
  .navbar .container-xl {
      display: -ms-flexbox;
-     display: flex;
+     /* display: flex; */
      -ms-flex-wrap: wrap;
      flex-wrap: wrap;
      -ms-flex-align: center;
