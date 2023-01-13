@@ -34,15 +34,9 @@
                   <div class="banner__content-text" data-aos="fade-right">
                      <div class="banner__content-text-inner">
                         <div class="heading">
-                           <h2 class="heading__title pb-3">Welcome To Saray seafood</h2>
-                           <p class="heading__desc">Babette was the first restaurant to open in Egypt, the resturant
-                              The unique visitor experience is complemented by the creative interior of Saray
-                              Restaurant, which has added to the restaurant's identity a warm atmosphere by interfering
-                              with wooden materials taken from the spirit of the restaurant identity to inspire
-                              relaxation and tranquillity with a family atmosphere and psychological comfort. In
-                              addition to enjoying quiet music that comforts your interior while eating, all of which
-                              are delicate details that meet each other to form an integrated mix for a wonderful and
-                              memorable experience.</p>
+                           <h2 class="heading__title pb-3">Welcome to Sarayi 
+                              From Turkey to Cairo</h2>
+                           <p class="heading__desc">Sarayi’s main objective is to provide an exemplary family and sociable atmosphere, with live entertainment, excellent customer service, and superb food using top quality seafood, fresh produce, and delicious herbs. Our focus is to leave you with satisfaction and a lasting impression that your dining was the best culinary experiences that you have ever encountered.</p>
                         </div>
                      </div>
                   </div>
@@ -331,7 +325,7 @@
                   <div class="banner__content-text" data-aos="fade-left">
                      <div class="banner__content-text-inner">
                         <div class="heading mb-40">
-                           <h2 class="heading__title">Private Dining & Events</h2>
+                           <h2 class="heading__title">Sarayi Breakfast</h2>
                            <div class="heading__icon">
                               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                  viewBox="0 0 20 20">
@@ -340,18 +334,16 @@
                                     transform="translate(-505 -925)"></path>
                               </svg>
                            </div>
-                           <p class="heading__desc">Allow us to make your next special event extra special. We cater
-                              for all
-                              sized functions, ideal for your larger functions or an intimate gathering, our team can
-                              curate a
-                              menu to suit your taste.</p>
+                           <p class="heading__desc">we are consistently creating better food moments for your loved ones and you, with the freshest ingredients and tastiest recipes.
+                              The big  Breakfast includes an extensive menu from fruits, spreads to breads and protein options.
+                              With entrees ranging from three choices of eggs (Menemen, Sucuk, Pastrami,Omelette or Boiled) to the wholesome vegetable platters and stuffed cherry peppers, the new menu features “Something that everyone in the group will love</p>
                         </div>
                         <a href="#" class="btn btn__secondary btn__link mx-2 my-1">Explore Events</a>
                         <a href="#" class="btn btn__primary mx-2 my-1">Explore Events</a>
                      </div>
                   </div>
                   <div class="banner__content-img" data-aos="fade-right">
-                     <img src="/images/banners/2.png" alt="banner">
+                     <img src="{{ asset('gif/RotatingSeaFood.gif') }}" style="transform: scaleX(-1);" alt="banner">
                   </div><!-- /.banner__content-img -->
                </div>
             </div>

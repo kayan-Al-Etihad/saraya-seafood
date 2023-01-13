@@ -17,9 +17,9 @@
                         <li class="nav__item with-dropdown">
                             <a href="{{route('team')}}" class="dropdown-toggle nav__item-link {{ Request::routeIs('team') ? 'active' : '' }}">{{ __('index.team') }}</a>
                         </li><!-- /.nav-item -->
-                        {{-- <li class="nav__item with-dropdown">
+                        <li class="nav__item with-dropdown">
                             <a href="{{route('offers')}}" class="dropdown-toggle nav__item-link {{ Request::routeIs('offers') ? 'active' : '' }}">{{ __('index.offer') }}</a>
-                        </li> --}}
+                        </li>
                         <li class="nav__item with-dropdown">
                             <a href="{{route('about')}}" class="dropdown-toggle nav__item-link {{ Request::routeIs('about') ? 'active' : '' }}">{{ __('index.about') }}</a>
                         </li><!-- /.nav-item -->
