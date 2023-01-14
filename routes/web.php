@@ -37,8 +37,8 @@ Route::get('/contact-us', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/events', function () {
-    return view('events');
-})->name('offers');
+// Route::get('/events', function () {
+//     return view('events');
+// })->name('offers');
 
 });

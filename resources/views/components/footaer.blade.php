@@ -35,8 +35,8 @@
 
             <div class="col-sm-12 col-md-12 col-lg-12 pb-5">
                <div class="footer__copyright mb-30">
-                  <span>&copy; copywrite, 2023 , by</span>
-                  <a href="#" class="color-theme">kayanethad</a>
+                  <span>2023 &copy; by</span>
+                  <a href="#" class="color-theme">Kayan Al Etihad</a>
                </div>
                <ul class="social__icons social__icons-white justify-content-center">
                   <li><a href="https://www.instagram.com/sarayi_sea_food/"><i class="fa fa-instagram"></i></a></li>

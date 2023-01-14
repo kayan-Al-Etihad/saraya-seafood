@@ -8,7 +8,7 @@
             <div class="slide__conten">
                <img src="{{ asset('images/logo/logo-light.png') }}" class="image" alt="slide img"
                   style="display: inline;">
-               <a href="{{ route('menu') }}" class="btn btn__white btn__bordered my-5">menu</a>
+               <a href="{{ route('menu') }}" class="btn btn__white btn__bordered my-5">{{ __('menu.menu') }}</a>
             </div>
          </div>
          <div class="slide-item align-v-h text-center bg-overlay bg-overlay-2">
@@ -16,7 +16,7 @@
             <div class="slide__conten">
                <img src="{{ asset('images/logo/logo-light.png') }}" alt="slide img" width="10"
                   style="display: inline;">
-               <a href="{{ route('menu') }}" class="btn btn__white btn__bordered my-5">menu</a>
+               <a href="{{ route('menu') }}" class="btn btn__white btn__bordered my-5">{{ __('menu.menu') }}</a>
             </div>
          </div>
       </div>
@@ -34,9 +34,8 @@
                   <div class="banner__content-text" data-aos="fade-right">
                      <div class="banner__content-text-inner">
                         <div class="heading">
-                           <h2 class="heading__title pb-3">Welcome to Sarayi 
-                              From Turkey to Cairo</h2>
-                           <p class="heading__desc">Sarayi’s main objective is to provide an exemplary family and sociable atmosphere, with live entertainment, excellent customer service, and superb food using top quality seafood, fresh produce, and delicious herbs. Our focus is to leave you with satisfaction and a lasting impression that your dining was the best culinary experiences that you have ever encountered.</p>
+                           <h2 class="heading__title pb-3">{{ __('menu.welcome') }}</h2>
+                           <p class="heading__desc">{{__('menu.main_objective')}}</p>
                         </div>
                      </div>
                   </div>
@@ -55,7 +54,7 @@
          <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
                <div class="heading heading-white text-center mb-50">
-                  <h2 class="heading__title">Discover Our Menu</h2>
+                  <h2 class="heading__title">{{__('menu.discover_menu')}}</h2>
                </div>
             </div>
          </div>
@@ -310,7 +309,7 @@
          </div>
          <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-               <a href="{{route('menu')}}" class="btn-custom">Menu</a>
+               <a href="{{route('menu')}}" class="btn-custom">{{__('menu.menu')}}</a>
             </div>
          </div>
       </div>
@@ -325,7 +324,7 @@
                   <div class="banner__content-text" data-aos="fade-left">
                      <div class="banner__content-text-inner">
                         <div class="heading mb-40">
-                           <h2 class="heading__title">Sarayi Breakfast</h2>
+                           <h2 class="heading__title">{{__('menu.sarayi_breakfast')}}</h2>
                            <div class="heading__icon">
                               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                  viewBox="0 0 20 20">
@@ -334,12 +333,10 @@
                                     transform="translate(-505 -925)"></path>
                               </svg>
                            </div>
-                           <p class="heading__desc">we are consistently creating better food moments for your loved ones and you, with the freshest ingredients and tastiest recipes.
-                              The big  Breakfast includes an extensive menu from fruits, spreads to breads and protein options.
-                              With entrees ranging from three choices of eggs (Menemen, Sucuk, Pastrami,Omelette or Boiled) to the wholesome vegetable platters and stuffed cherry peppers, the new menu features “Something that everyone in the group will love</p>
+                           <p class="heading__desc">{{__('menu.food_moments')}}</p>
                         </div>
-                        <a href="#" class="btn btn__secondary btn__link mx-2 my-1">Explore Events</a>
-                        <a href="#" class="btn btn__primary mx-2 my-1">Explore Events</a>
+                        {{-- <a href="#" class="btn btn__secondary btn__link mx-2 my-1">{{__('menu.explore_events')}}</a> --}}
+                        <a href="#" class="btn btn__primary mx-2 my-1">{{__('menu.explore_events')}}</a>
                      </div>
                   </div>
                   <div class="banner__content-img" data-aos="fade-right">
