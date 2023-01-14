@@ -53,58 +53,58 @@
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('apetizers.butterfly shrmip') }}</h4>
                         <span class="pricing__tag">Selection</span>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">80 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('apetizers.Konafa shrimp') }}</h4>
-                        <span class="menu__item-price">$15.95</span>
+                        <span class="menu__item-price">95 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('apetizers.Saray Mix Fried') }}</h4>
-                        <span class="menu__item-price">$13.95</span>
+                        <span class="menu__item-price">155 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('apetizers.wings1') }}</h4>
-                        <span class="menu__item-price">$20.95</span>
+                        <span class="menu__item-price">110 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('apetizers.wings2') }}</h4>
-                        <span class="menu__item-price">$18.95</span>
+                        <span class="menu__item-price">140 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('apetizers.Pickled tomatoes') }}</h4>
-                        <span class="menu__item-price">$18.95</span>
+                        <span class="menu__item-price">15 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('apetizers.Tahini salad') }}</h4>
-                        <span class="menu__item-price">$18.95</span>
+                        <span class="menu__item-price">20 EGP</span>
                     </div><!-- /.menu-item -->
                 </div><!-- /.col-lg-6 -->
 
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('apetizers.Mutabbal eggplant') }}</h4>
-                        <span class="menu__item-price">$33.95</span>
+                        <span class="menu__item-price">20 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('apetizers.Fried eggplant') }}</h4>
-                        <span class="menu__item-price">$33.95</span>
+                        <span class="menu__item-price">20 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('apetizers.Saray Gratan') }}</h4>
-                        <span class="menu__item-price">$26.95</span>
+                        <span class="menu__item-price">50 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('apetizers.Cheese spring roll') }}</h4>
-                        <span class="menu__item-price">$27.95</span>
+                        <span class="menu__item-price">68 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('apetizers.Sausage spring roll') }}</h4>
-                        <span class="menu__item-price">$27.95</span>
+                        <span class="menu__item-price">72 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('apetizers.Chicken strips') }}</h4>
-                        <span class="menu__item-price">$27.95</span>
+                        <span class="menu__item-price">80 EGP</span>
                     </div><!-- /.menu-item -->
                 </div><!-- /.col-lg-6 -->
             </div><!-- /.row  -->
@@ -135,19 +135,19 @@
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('breakfast.Classic breakfast') }}</h4>
                         <span class="pricing__tag">Selection</span>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">60 EGP</span>
                         <p class="menu__item-desc">{{ __('breakfast.Omelette - Toast - Mushroom - Fries') }}</p>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('breakfast.Saray Breakfast') }}</h4>
-                        <span class="menu__item-price">$15.95</span>
+                        <span class="menu__item-price">80 EGP</span>
                         <p class="menu__item-desc">{{ __('breakfast.Mix omelette salami or sausage - Mushroom - Toast - Fries') }}</p>
                     </div><!-- /.menu-item -->
                 </div><!-- /.col-lg-6 -->
                 <div class="col-sm-12 col-md-12 col-lg-6">
                   <div class="menu-item">
                     <h4 class="menu__item-title">{{ __('breakfast.Club sandwich') }}</h4>
-                    <span class="menu__item-price">$13.95</span>
+                    <span class="menu__item-price">90 EGP</span>
                     <p class="menu__item-desc">{{ __('breakfast.Omelette toast - Smoke Beef - Smoke turkey tomato - Mayonnaise fries') }}</p>
                 </div><!-- /.menu-item -->
                 </div><!-- /.col-lg-6 -->
@@ -179,17 +179,17 @@
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('soup.Bisk Soup') }}</h4>
                         <span class="pricing__tag">Selection</span>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">60 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('soup.Creamy Chicken') }}</h4>
-                        <span class="menu__item-price">$15.95</span>
+                        <span class="menu__item-price">60 EGP</span>
                     </div><!-- /.menu-item -->>
                 </div><!-- /.col-lg-6 -->
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('soup.Seafood Soup (Creamy)') }}</h4>
-                        <span class="menu__item-price">$33.95</span>
+                        <span class="menu__item-price">110 EGP</span>
                     </div><!-- /.menu-item -->
                 </div><!-- /.col-lg-6 -->
             </div><!-- /.row  -->
@@ -220,13 +220,13 @@
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('rise.Sayadiyah Rice (Brown)') }}</h4>
                         <span class="pricing__tag">Selection</span>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">25 EGP</span>
                     </div><!-- /.menu-item -->
                 </div><!-- /.col-lg-6 -->
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('rise.Basmati rice (yellow)') }}</h4>
-                        <span class="menu__item-price">$33.95</span>
+                        <span class="menu__item-price">30 EGP</span>
                     </div><!-- /.menu-item -->
                 </div><!-- /.col-lg-6 -->
             </div><!-- /.row  -->
@@ -256,23 +256,23 @@
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('salad.Smoke Salmon Salad') }}</h4>
-                        <span class="menu__item-price">$20.95</span>
+                        <span class="menu__item-price">80 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('salad.saladtahina') }}</h4>
-                        <span class="menu__item-price">$18.95</span>
+                        <span class="menu__item-price">15 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('salad.Tahini salad') }}</h4>
-                        <span class="menu__item-price">$18.95</span>
+                        <span class="menu__item-price">30 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('salad.motabal salad') }}</h4>
-                        <span class="menu__item-price">$18.95</span>
+                        <span class="menu__item-price">30 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('salad.Seasoned tomato salad') }}</h4>
-                        <span class="menu__item-price">$18.95</span>
+                        <span class="menu__item-price">25 EGP</span>
                     </div><!-- /.menu-item -->
                 </div><!-- /.col-lg-6 -->
 
@@ -280,19 +280,19 @@
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('salad.Salad aubergine fried') }}</h4>
-                        <span class="menu__item-price">$33.95</span>
+                        <span class="menu__item-price">25 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('salad.Garlic salad') }}</h4>
-                        <span class="menu__item-price">$26.95</span>
+                        <span class="menu__item-price">30 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('salad.Shrimp salad') }}</h4>
-                        <span class="menu__item-price">$26.95</span>
+                        <span class="menu__item-price">90 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('salad.tuna salad') }}</h4>
-                        <span class="menu__item-price">$26.95</span>
+                        <span class="menu__item-price">95 EGP</span>
                     </div><!-- /.menu-item -->
                 </div><!-- /.col-lg-6 -->
             </div><!-- /.row  -->
@@ -323,44 +323,44 @@
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('pasta.Pasta Sea Food') }}</h4>
-                        <span class="menu__item-price">$20.95</span>
+                        <span class="menu__item-price">125 EGP</span>
                         <p class="menu__item-desc">{{ __('pasta.(White sauce - red sauce (shrimp-fillet-squid-calamari)') }}</p>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('pasta.Pasta Jumbri') }}</h4>
-                        <span class="menu__item-price">$18.95</span>
+                        <span class="menu__item-price">110 EGP</span>
                         <p class="menu__item-desc">{{ __('pasta.(White Sauce - Red Sauce)') }}</p>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('pasta.Basta Maslaz') }}</h4>
-                        <span class="menu__item-price">$18.95</span>
+                        <span class="menu__item-price">90 EGP</span>
                         <p class="menu__item-desc">{{ __('pasta.(White Sauce - Red Sauce)') }}</p>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('pasta.Pasta Kalimari') }}</h4>
-                        <span class="menu__item-price">$18.95</span>
+                        <span class="menu__item-price">90 EGP</span>
                         <p class="menu__item-desc">{{ __('pasta.(White Sauce - Red Sauce)') }}</p>
                     </div><!-- /.menu-item -->
                 </div><!-- /.col-lg-6 -->
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('pasta.Pasta Salmon') }}</h4>
-                        <span class="menu__item-price">$18.95</span>
+                        <span class="menu__item-price">90 EGP</span>
                         <p class="menu__item-desc">{{ __('pasta.(White Sauce - Red Sauce)') }}</p>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('pasta.Shrimp') }}</h4>
-                        <span class="menu__item-price">$33.95</span>
+                        <span class="menu__item-price">130 EGP</span>
                         <p class="menu__item-desc">{{ __('pasta.(shrimp - sherry tomatoes - sauce (white - red)') }}</p>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('pasta.Mix CFD') }}</h4>
-                        <span class="menu__item-price">$26.95</span>
+                        <span class="menu__item-price">130 EGP</span>
                         <p class="menu__item-desc">{{ __('pasta.(shrimp - sherry tomatoes - sauce (white - red)') }}</p>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('pasta.Salmon') }}</h4>
-                        <span class="menu__item-price">$26.95</span>
+                        <span class="menu__item-price">170 EGP</span>
                         <p class="menu__item-desc">{{ __('pasta.(Salmon - white sauce - Pamizan cheese)') }}</p>
                     </div><!-- /.menu-item -->
                 </div><!-- /.col-lg-6 -->
@@ -392,17 +392,17 @@
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('fajita.Grilled shrimp fajita') }}</h4>
-                        <span class="menu__item-price">$20.95</span>
+                        <span class="menu__item-price">120 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('fajita.Fajita calamari grill') }}</h4>
-                        <span class="menu__item-price">$18.95</span>
+                        <span class="menu__item-price">90 EGP</span>
                     </div><!-- /.menu-item -->
                 </div><!-- /.col-lg-6 -->
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('fajita.Fajita calamari grill') }}</h4>
-                        <span class="menu__item-price">$18.95</span>
+                        <span class="menu__item-price">90 EGP</span>
                     </div><!-- /.menu-item -->
                 </div><!-- /.col-lg-6 -->
             </div><!-- /.row  -->
@@ -433,22 +433,22 @@
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('casserole.Molokhia with shrimp') }}</h4>
                         <span class="pricing__tag">Selection</span>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">75 EGP</span>
                     </div><!-- /.menu-item -->
 
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('casserole.Fillet Casserole') }}</h4>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">95 EGP</span>
                         <p class="menu__item-desc">{{ __('casserole.Red bell pepper - green bell pepper - Tomato - Onion - Alexandrian sauce') }}</p>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('casserole.Shrimp') }}</h4>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">145 EGP</span>
                         <p class="menu__item-desc">{{ __('casserole.Green bell pepper - red bell pepper - tomato - onion - Alexandrian sauce') }}</p>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('casserole.Saray Seafood') }}</h4>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">150 EGP</span>
                         <p class="menu__item-desc">{{ __('casserole.Shrimp - calamari - fillet - red bell pepper - green bell pepper - tomato - Alexandrian sauce') }}</p>
                     </div><!-- /.menu-item -->
 
@@ -457,17 +457,17 @@
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('casserole.Chicken') }}</h4>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">190 EGP</span>
                         <p class="menu__item-desc">{{ __('casserole.Delicious chicken pieces with Turkish Alexandrian sauce and vegetables') }}</p>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('casserole.Meat') }}</h4>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">200 EGP</span>
                         <p class="menu__item-desc">{{ __('casserole.Delicious meat pieces with fresh vegetables and Turkish Alexandrian sauce') }}</p>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('casserole.Shrimp') }}</h4>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">200 EGP</span>
                         <p class="menu__item-desc">{{ __('casserole.Shrimp with fresh vegetables and Turkish iskender sauce') }}</p>
                     </div><!-- /.menu-item -->
                 </div><!-- /.col-lg-6 -->
@@ -500,13 +500,13 @@
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('shish.Shish Fillet') }}</h4>
                         <span class="pricing__tag">Selection</span>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">90 EGP</span>
                     </div><!-- /.menu-item --> 
                 </div><!-- /.col-lg-6 -->
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('shish.Shish Jumbri') }}</h4>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">100 EGP</span>
                     </div><!-- /.menu-item -->
                 </div><!-- /.col-lg-6 -->
             </div><!-- /.row  -->
@@ -538,33 +538,33 @@
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('family.Family Mix Fried') }}</h4>
                         <span class="pricing__tag">Selection</span>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">300 EGP</span>
                         <p class="menu__item-desc">{{ __('family.Shrimp / calamari / fillet') }}</p>
 
                     </div><!-- /.menu-item --> 
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('family.Family mix grill') }}</h4>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">300 EGP</span>
                         <p class="menu__item-desc">{{ __('family.Shrimp / calamari / fillet') }}</p>
 
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('family.Family shrimp butter fry') }}</h4>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">300 EGP</span>
                     </div><!-- /.menu-item -->
                 </div><!-- /.col-lg-6 -->
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('family.Family crab butter fry') }}</h4>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">300 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('family.Grilled family puri') }}</h4>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">300 EGP</span>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('family.Family Dennis grilled') }}</h4>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">300 EGP</span>
                     </div><!-- /.menu-item -->
                 </div><!-- /.col-lg-6 -->
             </div><!-- /.row  -->
@@ -596,64 +596,64 @@
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('maindishes.Shish fillet') }}</h4>
                         <span class="pricing__tag">Selection</span>
-                        <span class="menu__item-price">$12.95</span>
+                        <span class="menu__item-price">90 EGP</span>
                         <p class="menu__item-desc">{{ __('maindishes.Fillet - red pepper - green pepper - onion - buffalo sauce, served with fries') }}</p>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('maindishes.Such a fillet') }}</h4>
-                        <span class="menu__item-price">$15.95</span>
+                        <span class="menu__item-price">110 EGP</span>
                         <p class="menu__item-desc">{{ __('maindishes.Fillet - red bell pepper - green bell pepper - tomato - onion') }}</p>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('maindishes.Calamari Satch') }}</h4>
-                        <span class="menu__item-price">$15.95</span>
+                        <span class="menu__item-price">110 EGP</span>
                         <p class="menu__item-desc">{{ __('maindishes.Calamari - red bell pepper - green bell pepper - tomato - onion') }}</p>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('maindishes.Chicken satach') }}</h4>
-                        <span class="menu__item-price">$15.95</span>
+                        <span class="menu__item-price">120 EGP</span>
                         <p class="menu__item-desc">{{ __('maindishes.Chicken - red pepper - green pepper - tomato') }}</p>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('maindishes.Alexandrian shrimp') }}</h4>
-                        <span class="menu__item-price">$15.95</span>
+                        <span class="menu__item-price">135 EGP</span>
                         <p class="menu__item-desc">{{ __('maindishes.Shrimp - red bell pepper - green bell pepper - onion') }}</p>
                     </div><!-- /.menu-item -->
                     <div class="menu-item">
                         <h4 class="menu__item-title">{{ __('maindishes.Shrimp shish') }}</h4>
-                        <span class="menu__item-price">$15.95</span>
+                        <span class="menu__item-price">155 EGP</span>
                         <p class="menu__item-desc">{{ __('maindishes.Shrimp - green pepper - red pepper - onion - buffalo sauce, served with fries') }}</p>
                     </div><!-- /.menu-item -->
                 </div><!-- /.col-lg-6 -->
                 <div class="col-sm-12 col-md-12 col-lg-6">
                   <div class="menu-item">
                     <h4 class="menu__item-title">{{ __('maindishes.Shrimp satach') }}</h4>
-                    <span class="menu__item-price">$13.95</span>
+                    <span class="menu__item-price">160 EGP</span>
                     <p class="menu__item-desc">{{ __('maindishes.Shrimp - red bell pepper - green bell pepper - tomato - onion') }}</p>
                 </div><!-- /.menu-item -->
                 <div class="menu-item">
                     <h4 class="menu__item-title">{{ __('maindishes.Jumbo shrimp show') }}</h4>
-                    <span class="menu__item-price">$15.95</span>
+                    <span class="menu__item-price">160 EGP</span>
                     <p class="menu__item-desc">{{ __('maindishes.Shrimp - toast bread - turkish sauce - cherry tomatoes') }}</p>
                 </div><!-- /.menu-item -->
                 <div class="menu-item">
                     <h4 class="menu__item-title">{{ __('maindishes.Meat Satch') }}</h4>
-                    <span class="menu__item-price">$15.95</span>
+                    <span class="menu__item-price">190 EGP</span>
                     <p class="menu__item-desc">{{ __('maindishes.Meat - red pepper - green pepper - tomato') }}</p>
                 </div><!-- /.menu-item -->
                 <div class="menu-item">
                     <h4 class="menu__item-title">{{ __('maindishes.Boneless Chicken') }}</h4>
-                    <span class="menu__item-price">$15.95</span>
+                    <span class="menu__item-price">195 EGP</span>
                     <p class="menu__item-desc">{{ __('maindishes.Served with rice') }}</p>
                 </div><!-- /.menu-item -->
                 <div class="menu-item">
                     <h4 class="menu__item-title">{{ __('maindishes.Puri Sinjari') }}</h4>
-                    <span class="menu__item-price">$15.95</span>
+                    <span class="menu__item-price">--</span>
                     <p class="menu__item-desc">{{ __('maindishes.Singari puri - tomato - onion - hot pepper') }}</p>
                 </div><!-- /.menu-item -->
                 <div class="menu-item">
                     <h4 class="menu__item-title">{{ __('maindishes.Denis roast') }}</h4>
-                    <span class="menu__item-price">$15.95</span>
+                    <span class="menu__item-price">--</span>
                     <p class="menu__item-desc">{{ __('maindishes.1 sea bream fish - butter - lemon') }}</p>
                 </div><!-- /.menu-item -->
                 </div><!-- /.col-lg-6 -->
@@ -687,30 +687,30 @@
                 <div class="menu-item">
                     <h4 class="menu__item-title">{{ __('colddrinks.Soft Drink') }}</h4>
                     <span class="pricing__tag">Selection</span>
-                    <span class="menu__item-price">$12.95</span>
+                    <span class="menu__item-price">30 EGP</span>
                     <p class="menu__item-desc">{{ __('colddrinks.(Pepsi, 7Up, Miranda)') }}</p>
                 </div><!-- /.menu-item --> 
                 <div class="menu-item">
                     <h4 class="menu__item-title">{{ __('colddrinks.Small mineral water') }}</h4>
-                    <span class="menu__item-price">$12.95</span>
+                    <span class="menu__item-price">15 EGP</span>
                 </div><!-- /.menu-item -->
                 <div class="menu-item">
                     <h4 class="menu__item-title">{{ __('colddrinks.Large mineral water') }}</h4>
-                    <span class="menu__item-price">$12.95</span>
+                    <span class="menu__item-price">20 EGP</span>
                 </div><!-- /.menu-item -->
             </div><!-- /.col-lg-6 -->
             <div class="col-sm-12 col-md-12 col-lg-6">
                 <div class="menu-item">
                     <h4 class="menu__item-title">{{ __('colddrinks.Sparkling water') }}</h4>
-                    <span class="menu__item-price">$12.95</span>
+                    <span class="menu__item-price">30 EGP</span>
                 </div><!-- /.menu-item -->
                 <div class="menu-item">
                     <h4 class="menu__item-title">{{ __('colddrinks.Red Bull') }}</h4>
-                    <span class="menu__item-price">$12.95</span>
+                    <span class="menu__item-price">45 EGP</span>
                 </div><!-- /.menu-item -->
                 <div class="menu-item">
                     <h4 class="menu__item-title">{{ __('colddrinks.Ayran milk') }}</h4>
-                    <span class="menu__item-price">$12.95</span>
+                    <span class="menu__item-price">45 EGP</span>
                 </div><!-- /.menu-item -->
             </div><!-- /.col-lg-6 -->
         </div><!-- /.row  -->
@@ -743,37 +743,37 @@ class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradien
             <div class="menu-item">
                 <h4 class="menu__item-title">{{ __('hotdrinks.Single espresso') }}</h4>
                 <span class="pricing__tag">Selection</span>
-                <span class="menu__item-price">$12.95</span>
+                <span class="menu__item-price">25 EGP</span>
             </div><!-- /.menu-item --> 
             <div class="menu-item">
                 <h4 class="menu__item-title">{{ __('hotdrinks.Double espresso') }}</h4>
-                <span class="menu__item-price">$12.95</span>
+                <span class="menu__item-price">35 EGP</span>
             </div><!-- /.menu-item -->
             <div class="menu-item">
                 <h4 class="menu__item-title">{{ __('hotdrinks.cappuccino') }}</h4>
-                <span class="menu__item-price">$12.95</span>
+                <span class="menu__item-price">40 EGP</span>
             </div><!-- /.menu-item -->
             <div class="menu-item">
                 <h4 class="menu__item-title">{{ __('hotdrinks.Latte') }}</h4>
-                <span class="menu__item-price">$12.95</span>
+                <span class="menu__item-price">40 EGP</span>
             </div><!-- /.menu-item -->
 
 
             <div class="menu-item">
                 <h4 class="menu__item-title">{{ __('hotdrinks.Macchiato') }}</h4>
-                <span class="menu__item-price">$12.95</span>
+                <span class="menu__item-price">28 EGP</span>
             </div><!-- /.menu-item -->
             <div class="menu-item">
                 <h4 class="menu__item-title">{{ __('hotdrinks.Double macchiato') }}</h4>
-                <span class="menu__item-price">$12.95</span>
+                <span class="menu__item-price">28 EGP</span>
             </div><!-- /.menu-item -->
             <div class="menu-item">
                 <h4 class="menu__item-title">{{ __('hotdrinks.Americano') }}</h4>
-                <span class="menu__item-price">$12.95</span>
+                <span class="menu__item-price">28 EGP</span>
             </div><!-- /.menu-item -->
             <div class="menu-item">
                 <h4 class="menu__item-title">{{ __('hotdrinks.Single Turkish coffee') }}</h4>
-                <span class="menu__item-price">$12.95</span>
+                <span class="menu__item-price">22 EGP</span>
             </div><!-- /.menu-item -->
 
 
@@ -781,37 +781,37 @@ class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradien
         <div class="col-sm-12 col-md-12 col-lg-6">
             <div class="menu-item">
                 <h4 class="menu__item-title">{{ __('hotdrinks.hot chocolate') }}</h4>
-                <span class="menu__item-price">$12.95</span>
+                <span class="menu__item-price">45 EGP</span>
             </div><!-- /.menu-item -->
             <div class="menu-item">
                 <h4 class="menu__item-title">{{ __('hotdrinks.Mocha Cafe') }}</h4>
-                <span class="menu__item-price">$12.95</span>
+                <span class="menu__item-price">45 EGP</span>
             </div><!-- /.menu-item -->
             <div class="menu-item">
                 <h4 class="menu__item-title">{{ __('hotdrinks.Spanish latte') }}</h4>
-                <span class="menu__item-price">$12.95</span>
+                <span class="menu__item-price">40 EGP</span>
             </div><!-- /.menu-item -->
             <div class="menu-item">
                 <h4 class="menu__item-title">{{ __('hotdrinks.Flat white') }}</h4>
-                <span class="menu__item-price">$12.95</span>
+                <span class="menu__item-price">45 EGP</span>
             </div><!-- /.menu-item -->
 
 
             <div class="menu-item">
                 <h4 class="menu__item-title">{{ __('hotdrinks.Double Turkish coffee') }}</h4>
-                <span class="menu__item-price">$12.95</span>
+                <span class="menu__item-price">30 EGP</span>
             </div><!-- /.menu-item -->
             <div class="menu-item">
                 <h4 class="menu__item-title">{{ __('hotdrinks.apple cider') }}</h4>
-                <span class="menu__item-price">$12.95</span>
+                <span class="menu__item-price">45</span>
             </div><!-- /.menu-item -->
             <div class="menu-item">
                 <h4 class="menu__item-title">{{ __('hotdrinks.tea') }}</h4>
-                <span class="menu__item-price">$12.95</span>
+                <span class="menu__item-price">25 EGP</span>
             </div><!-- /.menu-item -->
             <div class="menu-item">
                 <h4 class="menu__item-title">{{ __('hotdrinks.Flavored tea') }}</h4>
-                <span class="menu__item-price">$12.95</span>
+                <span class="menu__item-price">30 EGP</span>
             </div><!-- /.menu-item -->
 
         </div><!-- /.col-lg-6 -->
@@ -845,14 +845,14 @@ class="text-banner text-banner-layout1 text-center bg-overlay bg-overlay-gradien
             <div class="menu-item">
                 <h4 class="menu__item-title">{{ __('Exclusivehotdrinks.Spanish Latte') }}</h4>
                 <span class="pricing__tag">Selection</span>
-                <span class="menu__item-price">$12.95</span>
+                <span class="menu__item-price">40 EGP</span>
             </div><!-- /.menu-item --> 
 
         </div><!-- /.col-lg-6 -->
         <div class="col-sm-12 col-md-12 col-lg-6">
             <div class="menu-item">
                 <h4 class="menu__item-title">{{ __('Exclusivehotdrinks.Pop Corn Latte') }}</h4>
-                <span class="menu__item-price">$12.95</span>
+                <span class="menu__item-price">55 EGP</span>
             </div><!-- /.menu-item -->
         </div><!-- /.col-lg-6 -->
     </div><!-- /.row  -->
